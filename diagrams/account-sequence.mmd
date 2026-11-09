@@ -1,0 +1,11 @@
+sequenceDiagram
+ participant User as Postman
+ participant Api as AccountController
+ participant Logic as AccountService
+ participant DB as MongoDB
+ User->>Api: Open account / move money
+ Api->>Logic: RxJava Single
+ Logic->>DB: Spring Data reactive request
+ DB-->>Logic: Mono/Flux response
+ Logic-->>Api: RxJava result
+ Api-->>User: HTTP JSON response

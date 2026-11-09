@@ -1,0 +1,22 @@
+flowchart TB
+ Client[Postman / API consumers] --> Gateway[API Gateway :8080 / JWT]
+ Gateway --> Eureka[Eureka Discovery]
+ Gateway --> Customers[Customer service]
+ Gateway --> Accounts[Account service]
+ Gateway --> Credits[Credit service]
+ Gateway --> Wallet[Wallet service / Yanki]
+ Gateway --> Debit[Debit card service]
+ Gateway --> Identity[Identity / JWT]
+ Config[Spring Config Server :8888] -. config .-> Gateway
+ Config -. config .-> Customers
+ Config -. config .-> Accounts
+ Config -. config .-> Credits
+ Customers --> MC[(Mongo customers)]
+ Accounts --> MA[(Mongo accounts)]
+ Credits --> MR[(Mongo credits)]
+ Wallet --> MW[(Mongo wallet)]
+ Debit --> MD[(Mongo debit)]
+ Customers --> Cache[(Redis catalog cache)]
+ Wallet --> Kafka[[Kafka event bus]]
+ Debit --> Kafka
+ Kafka --> Accounts

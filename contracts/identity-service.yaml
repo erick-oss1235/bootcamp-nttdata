@@ -1,0 +1,14 @@
+openapi: 3.0.3
+info:
+  title: API de autenticación
+  version: 1.0.0
+servers:
+  - url: http://localhost:8084
+paths:
+  /api/v1/auth/login:
+    post:
+      operationId: post__api_v1_auth_login
+      summary: POST /api/v1/auth/login
+      responses:
+        '200':
+          description: Resultado de la operación

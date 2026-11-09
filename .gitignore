@@ -1,0 +1,30 @@
+# Maven
+**/target/
+
+# STS / Eclipse
+**/.settings/
+**/.classpath
+**/.project
+
+# IntelliJ
+**/.idea/
+**/*.iml
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+logs/
+
+# Variables y secretos
+.env
+.env.*
+!.env.example
+**/application-local.yml
+**/application-local.yaml
+**/application-local.properties
+
+# Sistema operativo
+.DS_Store
+Thumbs.db*.exe

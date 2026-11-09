@@ -1,0 +1,60 @@
+openapi: 3.0.3
+info:
+  title: API de monedero Yanki
+  version: 1.0.0
+servers:
+  - url: http://localhost:8085
+paths:
+  /api/v1/wallets:
+    get:
+      operationId: get__api_v1_wallets
+      summary: GET /api/v1/wallets
+      responses:
+        '200':
+          description: Resultado de la operación
+    post:
+      operationId: post__api_v1_wallets
+      summary: POST /api/v1/wallets
+      responses:
+        '200':
+          description: Resultado de la operación
+  /api/v1/wallets/{phone}:
+    get:
+      operationId: get__api_v1_wallets_phone
+      summary: GET /api/v1/wallets/{phone}
+      responses:
+        '200':
+          description: Resultado de la operación
+    put:
+      operationId: put__api_v1_wallets_phone
+      summary: PUT /api/v1/wallets/{phone}
+      responses:
+        '200':
+          description: Resultado de la operación
+    delete:
+      operationId: delete__api_v1_wallets_phone
+      summary: DELETE /api/v1/wallets/{phone}
+      responses:
+        '200':
+          description: Resultado de la operación
+  /api/v1/wallets/{phone}/top-ups:
+    post:
+      operationId: post__api_v1_wallets_phone_top-ups
+      summary: POST /api/v1/wallets/{phone}/top-ups
+      responses:
+        '200':
+          description: Resultado de la operación
+  /api/v1/wallets/{phone}/transfers:
+    post:
+      operationId: post__api_v1_wallets_phone_transfers
+      summary: POST /api/v1/wallets/{phone}/transfers
+      responses:
+        '200':
+          description: Resultado de la operación
+  /api/v1/wallets/{phone}/debit-card/{cardId}:
+    put:
+      operationId: put__api_v1_wallets_phone_debit-card_cardId
+      summary: PUT /api/v1/wallets/{phone}/debit-card/{cardId}
+      responses:
+        '200':
+          description: Resultado de la operación

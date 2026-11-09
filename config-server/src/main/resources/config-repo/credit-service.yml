@@ -1,0 +1,21 @@
+server:
+  port: ${CREDIT_SERVICE_PORT:8083}
+spring:
+  kafka:
+    bootstrap-servers: ${KAFKA_BOOTSTRAP:localhost:9092}
+    consumer:
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+    mongodb:
+      uri: ${CREDIT_SERVICE_MONGO_URI:mongodb://localhost:27017/credit_service}
+logging:
+  level:
+    root: INFO
+banking:
+  customer-service-url: ${CUSTOMER_SERVICE_URL:http://localhost:8081}
+  account-service-url: ${ACCOUNT_SERVICE_URL:http://localhost:8082}
+

@@ -1,0 +1,12 @@
+flowchart LR
+ Postman --> Customer[Customer service :8081]
+ Postman --> Account[Account service :8082]
+ Postman --> Credit[Credit service :8083]
+ Config[Config Server :8888] -. configuration .-> Customer
+ Config -. configuration .-> Account
+ Config -. configuration .-> Credit
+ Account -->|REST read| Customer
+ Credit -->|REST read| Customer
+ Customer --> MDB1[(customer_service)]
+ Account --> MDB2[(account_service)]
+ Credit --> MDB3[(credit_service)]

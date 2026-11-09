@@ -1,0 +1,46 @@
+openapi: 3.0.3
+info:
+  title: API de tarjetas de débito
+  version: 1.0.0
+servers:
+  - url: http://localhost:8086
+paths:
+  /api/v1/debit-cards:
+    get:
+      operationId: get__api_v1_debit-cards
+      summary: GET /api/v1/debit-cards
+      responses:
+        '200':
+          description: Resultado de la operación
+    post:
+      operationId: post__api_v1_debit-cards
+      summary: POST /api/v1/debit-cards
+      responses:
+        '200':
+          description: Resultado de la operación
+  /api/v1/debit-cards/{id}:
+    get:
+      operationId: get__api_v1_debit-cards_id
+      summary: GET /api/v1/debit-cards/{id}
+      responses:
+        '200':
+          description: Resultado de la operación
+    put:
+      operationId: put__api_v1_debit-cards_id
+      summary: PUT /api/v1/debit-cards/{id}
+      responses:
+        '200':
+          description: Resultado de la operación
+    delete:
+      operationId: delete__api_v1_debit-cards_id
+      summary: DELETE /api/v1/debit-cards/{id}
+      responses:
+        '200':
+          description: Resultado de la operación
+  /api/v1/debit-cards/{id}/payment-requests:
+    post:
+      operationId: post__api_v1_debit-cards_id_payment-requests
+      summary: POST /api/v1/debit-cards/{id}/payment-requests
+      responses:
+        '200':
+          description: Resultado de la operación

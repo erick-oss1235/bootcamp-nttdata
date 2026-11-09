@@ -1,0 +1,15 @@
+server:
+    port: 8084
+spring:
+    application:
+        name: identity-service
+    config:
+        import: optional:configserver:http://localhost:8888
+eureka:
+    client:
+        service-url:
+            defaultZone: ${EUREKA_URL:http://localhost:8761/eureka/}
+banking:
+    demo-user: ${DEMO_USER:admin}
+    demo-password-hash: ${DEMO_PASSWORD_HASH:$2y$10$1WbEj3RN0Vbuvk/z52wSCe.ejJoKxAoBAmiAgWC22k2H4cj7iNBhS}
+    jwt-secret: ${JWT_SECRET:CHANGE_ME_DEVELOPMENT_ONLY_32_CHAR_SECRET_123456}

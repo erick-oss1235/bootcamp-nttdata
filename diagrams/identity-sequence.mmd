@@ -1,0 +1,11 @@
+sequenceDiagram
+ participant User as API client
+ participant Gateway
+ participant Service as identity-service
+ participant Storage as Database / broker
+ User->>Gateway: HTTP request
+ Gateway->>Service: Forward validated request
+ Service->>Storage: Save / read / publish
+ Storage-->>Service: Result
+ Service-->>Gateway: JSON response
+ Gateway-->>User: HTTP response

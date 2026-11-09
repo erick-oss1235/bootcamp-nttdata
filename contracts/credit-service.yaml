@@ -1,0 +1,120 @@
+openapi: 3.0.3
+info:
+  title: API de créditos
+  version: 1.0.0
+servers:
+  - url: http://localhost:8083
+paths:
+  /api/v1/credits:
+    get:
+      summary: GET /api/v1/credits
+      operationId: get_api_v1_credits
+      responses:
+        '200':
+          description: Operación realizada correctamente
+    post:
+      summary: POST /api/v1/credits
+      operationId: post_api_v1_credits
+      responses:
+        '200':
+          description: Operación realizada correctamente
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+  /api/v1/credits/{id}:
+    get:
+      summary: GET /api/v1/credits/{id}
+      operationId: get_api_v1_credits_id
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Operación realizada correctamente
+    put:
+      summary: PUT /api/v1/credits/{id}
+      operationId: put_api_v1_credits_id
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Operación realizada correctamente
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+    delete:
+      summary: DELETE /api/v1/credits/{id}
+      operationId: delete_api_v1_credits_id
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Operación realizada correctamente
+  /api/v1/credits/{id}/payments:
+    post:
+      summary: POST /api/v1/credits/{id}/payments
+      operationId: post_api_v1_credits_id_payments
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Operación realizada correctamente
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+  /api/v1/credits/{id}/charges:
+    post:
+      summary: POST /api/v1/credits/{id}/charges
+      operationId: post_api_v1_credits_id_charges
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Operación realizada correctamente
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+  /api/v1/credits/{id}/movements:
+    get:
+      summary: GET /api/v1/credits/{id}/movements
+      operationId: get_api_v1_credits_id_movements
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Operación realizada correctamente

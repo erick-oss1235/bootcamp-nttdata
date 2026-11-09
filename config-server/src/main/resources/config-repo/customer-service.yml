@@ -1,0 +1,15 @@
+server:
+  port: ${CUSTOMER_SERVICE_PORT:8081}
+spring:
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+    mongodb:
+      uri: ${CUSTOMER_SERVICE_MONGO_URI:mongodb://localhost:27017/customer_service}
+logging:
+  level:
+    root: INFO
+banking:
+  customer-service-url: ${CUSTOMER_SERVICE_URL:http://localhost:8081}
+  account-service-url: ${ACCOUNT_SERVICE_URL:http://localhost:8082}

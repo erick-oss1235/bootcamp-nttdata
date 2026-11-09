@@ -1,0 +1,120 @@
+openapi: 3.0.3
+info:
+  title: API de cuentas bancarias
+  version: 1.0.0
+servers:
+  - url: http://localhost:8082
+paths:
+  /api/v1/accounts:
+    get:
+      summary: GET /api/v1/accounts
+      operationId: get_api_v1_accounts
+      responses:
+        '200':
+          description: Operación realizada correctamente
+    post:
+      summary: POST /api/v1/accounts
+      operationId: post_api_v1_accounts
+      responses:
+        '200':
+          description: Operación realizada correctamente
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+  /api/v1/accounts/{id}:
+    get:
+      summary: GET /api/v1/accounts/{id}
+      operationId: get_api_v1_accounts_id
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Operación realizada correctamente
+    put:
+      summary: PUT /api/v1/accounts/{id}
+      operationId: put_api_v1_accounts_id
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Operación realizada correctamente
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+    delete:
+      summary: DELETE /api/v1/accounts/{id}
+      operationId: delete_api_v1_accounts_id
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Operación realizada correctamente
+  /api/v1/accounts/{id}/deposits:
+    post:
+      summary: POST /api/v1/accounts/{id}/deposits
+      operationId: post_api_v1_accounts_id_deposits
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Operación realizada correctamente
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+  /api/v1/accounts/{id}/withdrawals:
+    post:
+      summary: POST /api/v1/accounts/{id}/withdrawals
+      operationId: post_api_v1_accounts_id_withdrawals
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Operación realizada correctamente
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+  /api/v1/accounts/{id}/movements:
+    get:
+      summary: GET /api/v1/accounts/{id}/movements
+      operationId: get_api_v1_accounts_id_movements
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Operación realizada correctamente

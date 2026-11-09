@@ -1,0 +1,69 @@
+openapi: 3.0.3
+info:
+  title: API de clientes
+  version: 1.0.0
+servers:
+  - url: http://localhost:8081
+paths:
+  /api/v1/customers:
+    get:
+      summary: GET /api/v1/customers
+      operationId: get_api_v1_customers
+      responses:
+        '200':
+          description: Operación realizada correctamente
+    post:
+      summary: POST /api/v1/customers
+      operationId: post_api_v1_customers
+      responses:
+        '200':
+          description: Operación realizada correctamente
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+  /api/v1/customers/{id}:
+    get:
+      summary: GET /api/v1/customers/{id}
+      operationId: get_api_v1_customers_id
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Operación realizada correctamente
+    put:
+      summary: PUT /api/v1/customers/{id}
+      operationId: put_api_v1_customers_id
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Operación realizada correctamente
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+    delete:
+      summary: DELETE /api/v1/customers/{id}
+      operationId: delete_api_v1_customers_id
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Operación realizada correctamente
